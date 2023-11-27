@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Your Professional Web Page</title>
+    <title>My First Company</title>
 </head>
 <body>
     <header>
-        <h1>Your Company Name</h1>
+        <h1>Destiny</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -34,24 +34,37 @@
     </section>
 
     <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Service 1</li>
-                <li>Service 2</li>
-                <li>Service 3</li>
-            </ul>
-        </div>
-    </section>
+    <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+            <li><a href="service1.html">Service 1</a></li>
+            <li><a href="service2.html">Service 2</a></li>
+            <li><a href="service3.html">Service 3</a></li>
+        </ul>
+    </div>
+</section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <!-- Your contact form goes here -->
-            </form>
-        </div>
-    </section>
+   <section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
 
     <footer>
         <div class="container">
