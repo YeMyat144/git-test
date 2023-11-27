@@ -1,8 +1,9 @@
-div {
-  color: black;
-  background-color: black;
+#subsection {
+  background-color: yellow;
+  color: blue;
 }
 
-p {
-  color: red;
+/* rule 2 */
+.main #subsection {
+ color: red;
 }
