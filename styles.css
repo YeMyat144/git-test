@@ -1,29 +1,30 @@
 body {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
     background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
-#game-container {
-    position: relative;
+h1, h2 {
+    margin-bottom: 10px;
 }
 
-.fighter {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    position: absolute;
-    transition: left 0.2s ease-in-out;
+#players-section, #schedule-section {
+    margin: 20px;
 }
 
-#player1 {
-    left: 50px;
-}
-
-#player2 {
-    right: 50px;
-    transform: scaleX(-1); /* Flip the player to face left */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
