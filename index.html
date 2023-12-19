@@ -3,73 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Fighter</title>
     <link rel="stylesheet" href="styles.css">
-    <title>My First Company</title>
 </head>
 <body>
-    <header>
-        <h1>Destiny</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home">
-        <div class="container">
-            <h2>Welcome to Our Website</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-    </section>
+<div id="game-container">
+    <div id="player1" class="fighter"></div>
+    <div id="player2" class="fighter"></div>
+</div>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-    </section>
-
-    <section id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <ul>
-            <li><a href="service1.html">Service 1</a></li>
-            <li><a href="service2.html">Service 2</a></li>
-            <li><a href="service3.html">Service 3</a></li>
-        </ul>
-    </div>
-</section>
-
-   <section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</section>
-
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
+<script src="main.js"></script>
 </body>
 </html>
