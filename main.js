@@ -1,41 +1,67 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Fetch player data and tournament schedule dynamically
-    fetchPlayerData();
-    fetchTournamentSchedule();
+const audio = document.getElementById("backgroundMusic");
+
+
+   const audioQuery = document.querySelector("audio");
+   window.addEventListener("DOMContentLoaded", event => {
+       
+       audioQuery.volume = 1;
+       audioQuery.play();
+   });
+
+   function audioController() {
+      if (!audio.paused) {
+           audio.pause();
+       }
+      else {
+          audio.play();
+      }
+   }
+
+   imageTracker = "i"
+   function imageChange() {
+       var image = document.getElementById("audioController");
+       
+
+       if (imageTracker == "i"){
+           image.src = "resources/audioControllerOff.png"
+           imageTracker = "I"
+       }
+       else {
+           image.src = "resources/audioControllerOn.png"
+           imageTracker = "i"
+       }
+   }
+
+   const menuBtn = document.querySelector('.menuHamburger')
+   let menuOpen = false;
+   menuBtn.addEventListener('click', () => {
+       if(!menuOpen) {
+           menuBtn.classList.add('open');
+           menuOpen = true;
+       } else {
+           menuBtn.classList.remove('open');
+           menuOpen = false;
+       }
+   });
+   const list = document.querySelector('.rightBarStuff');
+menuBtn.addEventListener('click', () => {
+    list.classList.toggle('show');
 });
 
-function fetchPlayerData() {
-    // Example: Fetch player data from an API
-    // This is a simplified example; in a real scenario, you would make an AJAX request
-    const playerList = document.getElementById('player-list');
 
-    // Sample data for illustration
-    const players = ['Ryu', 'Chun-Li', 'Ken', 'Guile', 'Zangief'];
+const qq = document.querySelector(".dropdownContent");
+function s() {
+        qq.style.display = "flex";
+  }
 
-    players.forEach(player => {
-        const listItem = document.createElement('li');
-        listItem.textContent = player;
-        playerList.appendChild(listItem);
-    });
+  function c() {
+        qq.style.display = "none";
 }
 
-function fetchTournamentSchedule() {
-    // Example: Fetch tournament schedule from an API
-    // This is a simplified example; in a real scenario, you would make an AJAX request
-    const scheduleTable = document.getElementById('schedule-table');
-
-    // Sample data for illustration
-    const schedule = [
-        { round: 'Round 1', time: '12:00 PM', location: 'Arena A' },
-        { round: 'Round 2', time: '2:00 PM', location: 'Arena B' },
-        { round: 'Semi-finals', time: '4:00 PM', location: 'Main Stage' },
-        { round: 'Finals', time: '6:00 PM', location: 'Main Stage' }
-    ];
-
-    schedule.forEach(match => {
-        const row = scheduleTable.insertRow();
-        row.insertCell(0).textContent = match.round;
-        row.insertCell(1).textContent = match.time;
-        row.insertCell(2).textContent = match.location;
-    });
-}
+function showOrHide() {
+    if (qq.style.display === "none") {
+      s()
+    } else {
+      c()
+    }
+  }
